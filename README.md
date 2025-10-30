@@ -34,3 +34,33 @@ MATLAB颜色提取程序
 - 颜色相似度计算
 - 调色板生成
 - 色温分析
+## 📁 项目结构
+```
+COLOR/
+├── extract_dominant_color.m    # 核心
+颜色提取函数（已优化）
+├── color_extractor_gui.m       # 图形
+用户界面（新增）
+├── color_utils.m               # 颜色
+工具函数集（新增）
+└── README.md                   # 项目
+说明文档（新增）
+```
+## 🚀 使用方法
+### 启动GUI界面（推荐）：
+```
+color_extractor_gui
+```
+### 命令行使用：
+```
+% 使用默认参数
+colors = extract_dominant_color();
+
+% 指定参数
+colors = extract_dominant_color(8, 
+'grid', 1);
+
+% 指定图片路径
+colors = extract_dominant_color(5, 
+'kmeans', 1, 'image.jpg');
+```
